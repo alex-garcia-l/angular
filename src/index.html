@@ -8,11 +8,60 @@
     <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/urku.css">
+    <style>
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      svg path,
+      svg rect{
+        fill: black;
+      }
+
+      .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+      }
+
+      .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+
+      @media (print), (prefers-reduced-motion: reduce) {
+        .animated {
+          -webkit-animation-duration: 1ms !important;
+          animation-duration: 1ms !important;
+          -webkit-transition-duration: 1ms !important;
+          transition-duration: 1ms !important;
+          -webkit-animation-iteration-count: 1 !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
   </head>
   <body class="top-fixed">
     <app-root></app-root>
-    
-    
+
+
     <script src="assets/js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>
